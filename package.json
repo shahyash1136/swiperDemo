@@ -1,0 +1,25 @@
+{
+  "name": "NBA",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-changed": "^4.0.1",
+    "sass": "^1.22.12"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-dart-sass": "^0.9.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yash",
+  "license": "ISC"
+}
