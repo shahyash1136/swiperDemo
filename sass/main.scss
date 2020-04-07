@@ -6,11 +6,4 @@
 /* @import '_maps.scss'; */
 @import '_mixin.scss';
 @import '_project-common.scss';
-@import 'reuseable-modules/_header.scss';
-@import 'reuseable-modules/_footer.scss';
-@import 'reuseable-modules/_slider.scss';
-@import 'reuseable-modules/_tabs.scss';
-@import 'reuseable-modules/_fixtures.scss';
-@import 'reuseable-modules/_loader.scss';
-@import 'pages/scores.scss';
-@import 'pages/players.scss';
+@import 'pages/player-journey.scss'
