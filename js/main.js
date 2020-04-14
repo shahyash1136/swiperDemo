@@ -1,5 +1,5 @@
 var JOR = JOR || {};
-JOR.baseUrl = '/js/json/41.json';
+JOR.baseUrl = '/js/json/318.json';
 JOR.loadJson = function () {
     $.ajax({
         type: 'GET',
@@ -51,7 +51,8 @@ JOR.playerJourney = function () {
     data.seasons = JOR.seasons.sort((a, b) => a.id - b.id);
     var markup;
     for (let i = 0; i < data.seasons.length; i++) {
-        markup = `<div class="swiper-slide seasons-swipe season-played-season" data-seasonId="${data.seasons[i].id}" data-year="${data.seasons[i].year}" data-season="${data.seasons[i].name}"><div class="sikb-box"><a><p class="year-block"><i class="year season-played">${data.seasons[i].year}</i></p></a></div></div>`
+
+        markup = `<div class="swiper-slide seasons-swipe" data-seasonId="${data.seasons[i].id}" data-year="${data.seasons[i].year}" data-season="${data.seasons[i].name}"><div class="sikb-box"><a><p class="year-block"><i class="year season-played">${data.seasons[i].year}</i></p></a></div></div>`
         document.querySelector('.journey-swiper-container .swiper-wrapper').innerHTML += markup;
     }
 
@@ -110,10 +111,11 @@ JOR.playerJourney = function () {
                 var raidSvg = 340 - 3.4 * playerData.success_raid_percent; 
                 document.querySelector('.tackle-svg').style.strokeDashoffset = tackleSvg;
                 document.querySelector('.raid-svg').style.strokeDashoffset = raidSvg;
-
                 break;
             }
-
+            if (!data.over_all_stats[j].series_id) {
+                JOR.journeySwiper.slideNext();
+            }
         }
     }
 
